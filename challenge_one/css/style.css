@@ -1,0 +1,137 @@
+body {
+    margin: 10px;
+    font-family: 'Poppins' , serif;
+    font-size: 3vw;
+    color: #f5f5f5;
+}
+
+.grid {
+    display: grid;
+    text-align: center;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 20vh);
+    grid-gap: 0.4em;
+    grid-template-areas: 
+        'header header header'
+        'nav section section'
+        'article-1 article-2 article-3'
+        'footer footer footer'
+}
+
+header,
+nav,
+section,
+article,
+footer {
+    border-radius: 0.4rem;
+    background-color: green;
+}
+
+header {
+    grid-area: header;
+}
+
+nav {
+    grid-area: nav;
+}
+
+section {
+    grid-area: section;
+}
+
+.article-1 {
+    grid-area: article-1;
+}
+
+.article-2 {
+    grid-area: article-2;
+}
+
+.article-3 {
+    grid-area: article-3;
+}
+
+footer {
+    grid-area: footer;
+}
+
+
+/************ RESPONSIVE FOR MOBILE ******************************************/
+@media only screen and (max-width: 600px) {
+    .grid {
+        display: grid;
+        text-align: center;
+        grid-template-columns: 1fr;
+        grid-template-rows: 30vh 5vh 20vh 15vh 15vh 15vh 20vh;
+        grid-gap: 0.8em;
+        grid-template-areas: 
+            'header'
+            'nav'
+            'section'
+            'article-1'
+            'article-2'
+            'article-3'
+            'footer'
+    }
+
+    header,
+    nav,
+    section,
+    article,
+    footer {
+        border-radius: 0.4rem;
+        background-color: red;
+    }
+}
+
+/************ RESPONSIVE FOR TABLET ******************************************/
+@media only screen and (min-width: 768px) and (max-width: 800px) {
+    .grid {
+        display: grid;
+        text-align: center;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(5, 80px);
+        grid-gap: 0.8em;
+        grid-template-areas: 
+            'header header'
+            'nav section'
+            'article-1 article-1'
+            'article-2 article-3'
+            'footer footer'
+    }
+
+    header,
+    nav,
+    section,
+    article,
+    footer {
+        border-radius: 0.4rem;
+        background-color: blue;
+    }
+}
+
+
+/************ RESPONSIVE FOR LARGE DESKTOPS ******************************************/
+@media only screen and (min-width: 1200px) {
+    .grid {
+        display: grid;
+        text-align: center;
+        grid-template-columns: 2fr 5fr 2fr;
+        grid-template-rows: repeat(4, 20vh);
+        grid-gap: 0.8em;
+        grid-template-areas: 
+            'header header header'
+            'nav section section'
+            'article-1 article-2 article-3'
+            'footer footer footer'
+    }
+
+    header,
+    nav,
+    section,
+    article,
+    footer {
+        border-radius: 0.4rem;
+        background-color: orange;
+    }
+}
