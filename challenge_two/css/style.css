@@ -1,24 +1,36 @@
+body {
+    font-family: 'Poppins', 'serif';
+}
+
 .container {
     display: grid;
     max-width: 1000px;
     margin: 0 auto;
-    grid-template-columns: 80% 20%;
-    grid-template-rows: 35% 50%;
+    grid-template-columns: 80% 20px 30%;
+    grid-template-rows: 25% 50%;
     grid-template-areas:
-        "content1 ads"
-        "content2 ads"
+        "content1 blank ads"
+        "content2 blank ads"
 }
 
 .main1 {
     grid-area: content1;
 }
 
+h1 {
+    font-size: 2.6vw;
+}
+
 .main2 {
     grid-area: content2;
 }
 
-.ads {
+.aside {
     grid-area: ads;
+}
+
+.ad1 {
+    margin-top: 300px;
 }
 
 .nav {
@@ -28,12 +40,28 @@
 ul li {
     list-style: none;
     text-transform: uppercase;
-    display: inline-block;
+    /* display: inline-block; */
     padding-right: 2em;
 }
 
 .link {
     text-decoration: none;
+    display: inline;
+}
+
+
+
+.no-decoration a {
+    color: #e5127d;
+    text-decoration: none;
+}
+
+a {
+    color: #e5127d;
+}
+
+a:hover {
+    color: #94094f;
 }
 
 #underline::after {
@@ -58,7 +86,17 @@ ul li {
 }
 .fab,
 .fas {
-    font-size: 1.2em;
+    font-size: 1.4em;
+}
+
+.fa-facebook-f {
+    color: #325a97;
+}
+.fa-twitter {
+    color: #00aced;
+}
+.fa-share-square {
+    color: #7d7d7d;
 }
 
 .list {
